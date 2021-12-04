@@ -1,0 +1,10 @@
+# Токен Telegram бота
+Token: 1234567890:ABCDEFJABCDEFJABCDEFGABCDJDKFJGHKDH
+
+# ID вашего Telegram канала
+ChannelID: -1234567898765
+
+# Слова, наличие которых в тексте поста разрешает писать под ним комментарии.
+WhiteList:
+  - '#HASHTAG1
+  - '#HASHTAG2
