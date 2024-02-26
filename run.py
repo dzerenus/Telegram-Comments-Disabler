@@ -10,16 +10,16 @@ whitelist = None
 # Функция загрузки информации из yaml файла.
 # Возвращает токен бота, ID канала, список слов.
 def load_config(file_name):
-	f = open(file_name)
-	f = yaml.load(f, Loader=yaml.FullLoader)
+	with open(file_name, encoding='utf-8') as f:
+		f = yaml.load(f, Loader=yaml.FullLoader)
 
-	global token
-	global channelID
-	global whitelist
+		global token
+		global channelID
+		global whitelist
 
-	token = f['Token']
-	channelID = f['ChannelID']
-	whitelist = f['WhiteList']
+		token = f['Token']
+		channelID = f['ChannelID']
+		whitelist = f['WhiteList']
 
 
 def prepare(upd):
@@ -35,7 +35,8 @@ def prepare(upd):
 	text = text.lower()
 
 	is_del = True
-	for e in whitelist: 
+	for e in whitelist:
+		print(e, whitelist)
 		if e in text: is_del = False
 
 	if is_del:
