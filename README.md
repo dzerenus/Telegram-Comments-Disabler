@@ -19,6 +19,6 @@
     + Linux: `pip3 install -r requirements.txt`.
 6. Запустить бота:
     + Windows: `python run.py`;
-    + Linux: `pyton3 run.py`.
+    + Linux: `python3 run.py`.
 
 Запущенный бот будет получать у Telegram информацию о новых постах на канале и удалять их из привязанной беседы, что отключит возможность их комментировния.
